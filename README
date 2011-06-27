@@ -10,4 +10,45 @@ How To Use:
    if you using postgre sql: open file app/plugins/evacakephp/config/schema/evacakephp_postgresql.sql
    export the database to your DB Engine
 4. if your using mac osx or linux don't forget to chmod your app/config , app/controller , and app/views directory
-5. open your browser "http://localhost/your_app_name/evacakephp/eva_applications"
+5. in your app/config/database.php use this config
+	//if mysql	
+		var $default = array(
+			'driver' => 'mysql',
+			'persistent' => false,
+			'host' => 'localhost',
+			'login' => 'xxxx',
+			'password' => 'xxx',
+			'database' => 'something',
+		);
+		var $Evacakephp = array(
+			'driver' => 'mysql',
+			'persistent' => false,
+			'host' => 'localhost',
+			'login' => 'xxx',
+			'password' => 'xxx',
+			'database' => 'evacakephp',
+		);
+		
+	//if postgres
+	var $default = array(
+		'driver' => 'postgres',
+		'persistent' => false,
+		'host' => 'localhost',
+		'port' => 5432,
+		'login' => 'xxx',
+		'password' => 'xxx',
+		'database' => 'EvaCakePhpPlugin',
+		'schema' => 'public',
+	);
+	var $Evacakephp = array(
+		'driver' => 'postgres',
+		'persistent' => false,
+		'host' => 'localhost',
+		'port' => 5432,
+		'login' => 'xxx',
+		'password' => 'xxx',
+		'database' => 'EvaCakePhpPlugin',
+		'schema' => 'evacakephp',
+	);
+		
+6. open your browser "http://localhost/your_app_name/evacakephp/eva_applications"
