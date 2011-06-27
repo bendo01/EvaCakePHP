@@ -1,0 +1,106 @@
+/* table
+----------------------------------------------- */
+table.mytree {
+	width:100%;
+	border:1px solid #71a5cd;
+	margin-bottom:10px;
+}
+table.mytree col.colC {
+	width:8em;
+}
+
+table.mytree thead{
+	/*background: #5c9ccc url(images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x; */
+	background:#71a5cd;
+}
+
+table.mytree th, table.mytree td {
+	padding:.2em 1em;
+	text-align:left;
+}
+table.mytree thead th {
+	border-bottom:2px solid #71a5cd;
+	/*background:#71a5cd;*/
+	padding:.4em 1em .2em;
+}
+
+table.mytree thead tr,table.mytree thead tr a {
+	color: #ffffff;
+}
+
+table.mytree thead tr a:hover{
+	color:#fbec87;
+}
+
+table.mytree thead th.table-head {
+	font-size:1em;
+	font-weight:normal;
+	text-transform:uppercase;
+	color:#fff;
+	background:#72a9d2;
+	border:1px solid #71a5cd;
+}
+table.mytree tbody th,
+table.mytree tbody td {
+	border-top:1px solid #71a5cd;
+	/*border-bottom:1px solid #71a5cd;*/
+	background:#d2e5f4;
+}
+
+table.mytree tbody tr{
+	padding-left: 10px;
+	
+}
+table.mytree tbody tr{
+	padding-left: 10px;
+}
+
+table.mytree tbody tr.odd th,
+table.mytree tbody tr.odd td {
+	background:#eaf4fd;
+}
+
+
+table.mytree tfoot th,
+table.mytree tfoot td {
+	border-top:2px solid #9AC1DF;
+	background:#fbec87;
+}
+table.mytree tfoot tr.total th,
+table.mytree tfoot tr.total td {
+	border-top:6px double #9AC1DF;
+}
+table.mytree tfoot tr.total th {
+	text-transform:uppercase;
+}
+table.mytree th.currency,
+table.mytree td.currency {
+	text-align:right;
+}
+/*
+table.mytree th.actions,table.mytree td.actions {
+	text-align: center;
+	white-space: nowrap;
+}
+table.mytree td.actions a {
+	text-align: center;
+	white-space: nowrap;
+}
+
+table.mytree span {
+	background-position: center left;
+	background-repeat: no-repeat;
+	padding: .2em 0 .2em 1.5em;
+}
+*/
+table.mytree span.file {
+	background-image: url(images/page_white_text.png);
+	background-repeat: no-repeat;
+	padding: .2em 0 .2em 1.5em;
+}
+
+table.mytree span.folder {
+	background-image: url(images/folder.png);
+	background-repeat: no-repeat;
+	padding: .2em 0 .2em 1.5em;
+}

@@ -1,0 +1,154 @@
+/* CSS Document */
+a{
+	color: #2e6e9e;
+	/*font-weight:bold;*/
+	text-decoration: none;
+}
+p{
+	color: #ffffff;;
+	font-weight:normal;
+	font-size:12px;
+}
+
+h2{
+	font-size:18px;
+	color:#FFF;
+}
+
+h3{
+	font-size:14px;
+	color:#FFF;
+}
+
+h2.myrght, h3.myrght{
+	text-align:right;
+}
+
+/** Forms **/
+form.myform {
+	/*
+	clear: both;
+	margin-right: 20px;
+	padding: 0;
+	width: 95%;
+	*/
+}
+form.myform fieldset {
+	border:1px solid #71a5cd;
+	padding:10px;
+	position:relative;
+	/*background:#aecfe9;*/
+	background:#99c6e9;
+	margin-bottom:10px;
+}
+form.myform fieldset legend {
+	font-size:1.1em;
+	padding:.4em .8em;
+	background:#fbec87;
+	border:1px solid #71a5cd;
+}
+form.myform fieldset fieldset {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	padding: 16px 10px;
+}
+form.myform fieldset fieldset legend {
+	font-size: 120%;
+	font-weight: normal;
+}
+form.myform fieldset fieldset div {
+	clear: left;
+	margin: 0 20px;
+}
+form.myform div {
+	clear: both;
+	margin-bottom: 1em;
+	/*padding: .5em;*/
+	vertical-align: text-top;
+}
+form.myform .input {
+	color: #444;
+}
+form.myform .required {
+	font-weight: bold;
+}
+form.myform .required label:after {
+	color: #e32;
+	content: '*';
+	display:inline;
+}
+form.myform div.submit {
+	border: 0;
+	clear: both;
+	margin-top: 10px;
+}
+form.myform label {
+	display: block;
+	font-size: 110%;
+	margin-bottom:3px;
+}
+form.myform input, textarea {
+	clear: both;
+	font-size: 100%;
+	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif;
+	/*padding: 1%;*/
+	/*width:98%;*/
+	width:99%;
+	/*padding: 5px;*/
+	padding-top:5px;
+	padding-bottom:5px;
+	border:1px solid #71a5cd;
+	background-color:#eaf4fd;
+}
+
+form.myform input:focus, textarea:focus {
+	background-color: #fbec87;
+}
+
+
+form.myform select {
+	clear: both;
+	font-size: 100%;
+	vertical-align: text-bottom;
+}
+
+form.myform select[multiple=multiple] {
+	width: 100%;
+}
+
+form.myform option {
+	font-size: 120%;
+	padding: 0 3px;
+}
+/*
+div.checkbox{
+	display:inline;
+}
+*/
+
+form.myform input[type=checkbox] {
+	clear: left;
+	float: left;
+	margin: 0px 6px 7px 2px;
+	width: auto;
+}
+
+form.myform div.checkbox label {
+	display: inline;
+}
+
+form.myform input[type=radio] {
+	float:left;
+	width:auto;
+	margin: 0 3px 7px 0;
+}
+form.myform div.radio label {
+	margin: 0 0 6px 20px;
+}
+
+
+form.myform input[type=submit] {
+	display: inline;
+	font-size: 110%;
+	width: auto;
+}

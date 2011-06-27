@@ -1,0 +1,440 @@
+<div id="accordion">
+		<h3><a href="#"><?php  __('Eva Model');?></a></h3>
+		<div class="evaModels view">
+			<dl><?php $i = 0; $class = ' class="altrow"';?>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Id'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['id']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Name'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['name']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Alias'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['alias']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('CacheQueries'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['cacheQueries']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('CacheSources'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['cacheSources']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('DisplayField'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['displayField']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('FindQueryType'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['findQueryType']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('LogTransactions'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['logTransactions']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Order'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['order']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('PrimaryKey'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['primaryKey']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Recursive'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['recursive']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Table'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['table']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('TablePrefix'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['tablePrefix']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('UseDbConfig'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['useDbConfig']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('UseTable'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['useTable']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Eva Db Connection'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $this->Html->link($evaModel['EvaDbConnection']['name'], array('controller' => 'eva_db_connections', 'action' => 'view', $evaModel['EvaDbConnection']['id'])); ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Deleted'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['deleted']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Deleted Date'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['deleted_date']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Created By'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['created_by']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Modified By'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['modified_by']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Created'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['created']; ?>
+					&nbsp;
+				</dd>
+				<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Modified'); ?></dt>
+				<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+					<?php echo $evaModel['EvaModel']['modified']; ?>
+					&nbsp;
+				</dd>
+			</dl>
+		<br />
+		<div class="actions">
+			<ul>
+				<li><?php echo $this->Html->link(__('Edit Eva Model', true), array('action' => 'edit', $evaModel['EvaModel']['id']),array('class'=>'list_action_edit_new_data')); ?> </li>
+				<li><?php //echo $this->Html->link(__('Delete Eva Model', true), array('action' => 'delete', $evaModel['EvaModel']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $evaModel['EvaModel']['id'])); ?> 
+					<a href="#" class="list_action_delete_new_data">Delete Eva Model</a>
+				</li>
+				<li><?php echo $this->Html->link(__('List Eva Models', true), array('action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+				<li><?php echo $this->Html->link(__('New Eva Model', true), array('action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				<li><?php echo $this->Html->link(__('List Eva Db Connections', true), array('controller' => 'eva_db_connections', 'action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+			
+				<li><?php echo $this->Html->link(__('List Eva Belong To Associations', true), array('controller' => 'eva_belong_to_associations', 'action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+			
+				<li><?php echo $this->Html->link(__('List Eva Has And Belong To Many Associations', true), array('controller' => 'eva_has_and_belong_to_many_associations', 'action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+			
+				<li><?php echo $this->Html->link(__('List Eva Has Many Associations', true), array('controller' => 'eva_has_many_associations', 'action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+			
+				<li><?php echo $this->Html->link(__('List Eva Has One Associations', true), array('controller' => 'eva_has_one_associations', 'action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+			
+				<li><?php echo $this->Html->link(__('List Eva Model Columns', true), array('controller' => 'eva_model_columns', 'action' => 'index'),array('class'=>'list_action_add_list_data')); ?> </li>
+			
+				<!--
+				<li><?php //echo $this->Html->link(__('New Eva Belong To Association', true), array('controller' => 'eva_belong_to_associations', 'action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				<li><?php //echo $this->Html->link(__('New Eva Has And Belong To Many Association', true), array('controller' => 'eva_has_and_belong_to_many_associations', 'action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				<li><?php //echo $this->Html->link(__('New Eva Has Many Association', true), array('controller' => 'eva_has_many_associations', 'action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				<li><?php //echo $this->Html->link(__('New Eva Has One Association', true), array('controller' => 'eva_has_one_associations', 'action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				<li><?php //echo $this->Html->link(__('New Eva Db Connection', true), array('controller' => 'eva_db_connections', 'action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				<li><?php //echo $this->Html->link(__('New Eva Model Column', true), array('controller' => 'eva_model_columns', 'action' => 'add'),array('class'=>'list_action_add_new_data')); ?> </li>
+				-->
+			</ul>
+		</div>
+	</div>
+</div>
+<?php if (!empty($evaModel['EvaBelongToAssociation'])):?>
+<div class="detail_accordion">
+	<h3><a href="#"><?php __('Related Eva Belong To Associations');?></a></h3>
+	<div class="related">
+		<table border="0" cellspacing="5" cellpadding="5" class="mylayout">
+			<thead>
+				<tr>
+					<th><?php __('Id'); ?></th>
+					<th><?php __('Name'); ?></th>
+					<th><?php __('Eva Model Id'); ?></th>
+					<th><?php __('Associated Model Id'); ?></th>
+					<th><?php __('Description'); ?></th>
+					<th><?php __('Deleted'); ?></th>
+					<th><?php __('Deleted Date'); ?></th>
+					<th><?php __('Created By'); ?></th>
+					<th><?php __('Modified By'); ?></th>
+					<th><?php __('Created'); ?></th>
+					<th><?php __('Modified'); ?></th>
+					<th class="actions"><?php __('Actions');?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					$i = 0;
+					foreach ($evaModel['EvaBelongToAssociation'] as $evaBelongToAssociation):
+						$class = null;
+						if ($i++ % 2 == 0) {
+							$class = ' class="altrow"';
+						}
+					?>
+					<tr<?php echo $class;?>>
+						<td><?php echo $i;?></td>
+						<td><?php echo $evaBelongToAssociation['name'];?></td>
+						<td><?php echo $evaBelongToAssociation['EvaModel']['name'];?></td>
+						<td><?php echo $evaBelongToAssociation['associated_model_name'];?></td>
+						<td><?php echo $evaBelongToAssociation['description'];?></td>
+						<td><?php echo $evaBelongToAssociation['deleted'];?></td>
+						<td><?php echo $evaBelongToAssociation['deleted_date'];?></td>
+						<td><?php echo $evaBelongToAssociation['created_by'];?></td>
+						<td><?php echo $evaBelongToAssociation['modified_by'];?></td>
+						<td><?php echo $evaBelongToAssociation['created'];?></td>
+						<td><?php echo $evaBelongToAssociation['modified'];?></td>
+						<td class="actions">
+							<?php echo $this->Html->link(__('View', true), array('controller' => 'eva_belong_to_associations', 'action' => 'view', $evaBelongToAssociation['id']),array('class'=>'action_table_view_data')); ?>
+							<?php echo $this->Html->link(__('Edit', true), array('controller' => 'eva_belong_to_associations', 'action' => 'edit', $evaBelongToAssociation['id']),array('class'=>'action_table_edit_data')); ?>
+							<?php //echo $this->Html->link(__('Delete', true), array('controller' => 'eva_belong_to_associations', 'action' => 'delete', $evaBelongToAssociation['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $evaBelongToAssociation['id'])); ?>
+							<!--<a href="#" class="action_table_delete_data">Delete</a>-->
+						</td>
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this->Html->link(__('New Eva Belong To Association', true), array('controller' => 'eva_belong_to_associations', 'action' => 'add'));?> </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+<?php if (!empty($evaModel['EvaHasAndBelongToManyAssociation'])):?>
+<div class="detail_accordion">
+	<div class="related">
+		<h3><a href="#"><?php __('Related Eva Has And Belong To Many Associations');?></a></h3>
+		<table border="0" cellspacing="5" cellpadding="5" class="mylayout">
+			<thead>
+				<tr>
+					<th><?php __('Id'); ?></th>
+					<th><?php __('Name'); ?></th>
+					<th><?php __('Eva Model Id'); ?></th>
+					<th><?php __('Associated Model Id'); ?></th>
+					<th><?php __('Description'); ?></th>
+					<th><?php __('Deleted'); ?></th>
+					<th><?php __('Deleted Date'); ?></th>
+					<th><?php __('Created By'); ?></th>
+					<th><?php __('Modified By'); ?></th>
+					<th><?php __('Created'); ?></th>
+					<th><?php __('Modified'); ?></th>
+					<th class="actions"><?php __('Actions');?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					$i = 0;
+					foreach ($evaModel['EvaHasAndBelongToManyAssociation'] as $evaHasAndBelongToManyAssociation):
+						$class = null;
+						if ($i++ % 2 == 0) {
+							$class = ' class="altrow"';
+						}
+					?>
+					<tr<?php echo $class;?>>
+						<td><?php echo $evaHasAndBelongToManyAssociation['id'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['name'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['EvaModel']['name'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['associated_model_name'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['description'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['deleted'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['deleted_date'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['created_by'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['modified_by'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['created'];?></td>
+						<td><?php echo $evaHasAndBelongToManyAssociation['modified'];?></td>
+						<td class="actions">
+							<?php echo $this->Html->link(__('View', true), array('controller' => 'eva_has_and_belong_to_many_associations', 'action' => 'view', $evaHasAndBelongToManyAssociation['id']),array('class'=>'action_table_view_data')); ?>
+							<?php echo $this->Html->link(__('Edit', true), array('controller' => 'eva_has_and_belong_to_many_associations', 'action' => 'edit', $evaHasAndBelongToManyAssociation['id']),array('class'=>'action_table_edit_data')); ?>
+							<?php //echo $this->Html->link(__('Delete', true), array('controller' => 'eva_has_and_belong_to_many_associations', 'action' => 'delete', $evaHasAndBelongToManyAssociation['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $evaHasAndBelongToManyAssociation['id'])); ?>
+							<a href="#" class="action_table_delete_data">Delete</a>
+						</td>
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this->Html->link(__('New Eva Has And Belong To Many Association', true), array('controller' => 'eva_has_and_belong_to_many_associations', 'action' => 'add'));?> </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+<?php if (!empty($evaModel['EvaHasManyAssociation'])):?>
+<div class="detail_accordion">
+	<h3><a href="#"><?php __('Related Eva Has Many Associations');?></a></h3>
+	<div>
+		<table border="0" cellspacing="5" cellpadding="5" class="mylayout">
+			<thead>
+				<tr>
+					<th><?php __('Id'); ?></th>
+					<th><?php __('Name'); ?></th>
+					<th><?php __('Description'); ?></th>
+					<th><?php __('Eva Model Id'); ?></th>
+					<th><?php __('Associated Model Id'); ?></th>
+					<th><?php __('Deleted'); ?></th>
+					<th><?php __('Deleted Date'); ?></th>
+					<th><?php __('Created By'); ?></th>
+					<th><?php __('Modified By'); ?></th>
+					<th><?php __('Created'); ?></th>
+					<th><?php __('Modified'); ?></th>
+					<th class="actions"><?php __('Actions');?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					$i = 0;
+					foreach ($evaModel['EvaHasManyAssociation'] as $evaHasManyAssociation):
+						$class = null;
+						if ($i++ % 2 == 0) {
+							$class = ' class="altrow"';
+						}
+					?>
+					<tr<?php echo $class;?>>
+						<td><?php echo $i;?></td>
+						<td><?php echo $evaHasManyAssociation['name'];?></td>
+						<td><?php echo $evaHasManyAssociation['description'];?></td>
+						<td><?php echo $evaHasManyAssociation['EvaModel']['name'];?></td>
+						<td><?php echo $evaHasManyAssociation['associated_model_name'];?></td>
+						<td><?php echo $evaHasManyAssociation['deleted'];?></td>
+						<td><?php echo $evaHasManyAssociation['deleted_date'];?></td>
+						<td><?php echo $evaHasManyAssociation['created_by'];?></td>
+						<td><?php echo $evaHasManyAssociation['modified_by'];?></td>
+						<td><?php echo $evaHasManyAssociation['created'];?></td>
+						<td><?php echo $evaHasManyAssociation['modified'];?></td>
+						<td class="actions">
+							<?php echo $this->Html->link(__('View', true), array('controller' => 'eva_has_many_associations', 'action' => 'view', $evaHasManyAssociation['id']),array('class'=>'action_table_view_data','title'=>'view '.$evaHasManyAssociation['name'])); ?>
+							<?php //echo $this->Html->link(__('Edit', true), array('controller' => 'eva_has_many_associations', 'action' => 'edit', $evaHasManyAssociation['id']),array('class'=>'action_table_edit_data')); ?>
+							<?php //echo $this->Html->link(__('Delete', true), array('controller' => 'eva_has_many_associations', 'action' => 'delete', $evaHasManyAssociation['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $evaHasManyAssociation['id'])); ?>
+							<!--<a href="#" class="action_table_delete_data">Delete</a>-->
+						</td>
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+</div>
+<?php endif; ?>
+<?php if (!empty($evaModel['EvaHasOneAssociation'])):?>
+<div class="detail_accordion">
+	<div class="related">
+		<h3><a href="#"><?php __('Related Eva Has One Associations');?></a></h3>
+		
+		<table cellpadding = "0" cellspacing = "0">
+		<tr>
+			<th><?php __('Id'); ?></th>
+			<th><?php __('Name'); ?></th>
+			<th><?php __('Description'); ?></th>
+			<th><?php __('Eva Model Id'); ?></th>
+			<th><?php __('Associated Model Id'); ?></th>
+			<th><?php __('Deleted'); ?></th>
+			<th><?php __('Deleted Date'); ?></th>
+			<th><?php __('Created By'); ?></th>
+			<th><?php __('Modified By'); ?></th>
+			<th><?php __('Created'); ?></th>
+			<th><?php __('Modified'); ?></th>
+			<th class="actions"><?php __('Actions');?></th>
+		</tr>
+		<?php
+			$i = 0;
+			foreach ($evaModel['EvaHasOneAssociation'] as $evaHasOneAssociation):
+				$class = null;
+				if ($i++ % 2 == 0) {
+					$class = ' class="altrow"';
+				}
+			?>
+			<tr<?php echo $class;?>>
+				<td><?php echo $evaHasOneAssociation['id'];?></td>
+				<td><?php echo $evaHasOneAssociation['name'];?></td>
+				<td><?php echo $evaHasOneAssociation['description'];?></td>
+				<td><?php echo $evaHasOneAssociation['EvaModel']['name'];?></td>
+				<td><?php echo $evaHasOneAssociation['associated_model_name'];?></td>
+				<td><?php echo $evaHasOneAssociation['deleted'];?></td>
+				<td><?php echo $evaHasOneAssociation['deleted_date'];?></td>
+				<td><?php echo $evaHasOneAssociation['created_by'];?></td>
+				<td><?php echo $evaHasOneAssociation['modified_by'];?></td>
+				<td><?php echo $evaHasOneAssociation['created'];?></td>
+				<td><?php echo $evaHasOneAssociation['modified'];?></td>
+				<td class="actions">
+					<?php echo $this->Html->link(__('View', true), array('controller' => 'eva_has_one_associations', 'action' => 'view', $evaHasOneAssociation['id']),array('class'=>'action_table_view_data')); ?>
+					<?php echo $this->Html->link(__('Edit', true), array('controller' => 'eva_has_one_associations', 'action' => 'edit', $evaHasOneAssociation['id']),array('class'=>'action_table_edit_data')); ?>
+					<?php //echo $this->Html->link(__('Delete', true), array('controller' => 'eva_has_one_associations', 'action' => 'delete', $evaHasOneAssociation['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $evaHasOneAssociation['id'])); ?>
+					<a href="#" class="action_table_delete_data">Delete</a>
+				</td>
+			</tr>
+		<?php endforeach; ?>
+		</table>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this->Html->link(__('New Eva Has One Association', true), array('controller' => 'eva_has_one_associations', 'action' => 'add'));?> </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+<?php if (!empty($evaModel['EvaModelColumn'])):?>
+<div class="detail_accordion">
+	<h3><a href="#"><?php __('Related Eva Model Columns');?></a></h3>
+	<div class="related">
+		
+		<table border="0" cellspacing="5" cellpadding="5" class="mylayout">
+			<thead>
+		<tr>
+			<th><?php __('Id'); ?></th>
+			<th><?php __('Name'); ?></th>
+			<th><?php __('Alias'); ?></th>
+			<th><?php __('Type'); ?></th>
+			<th><?php __('Length'); ?></th>
+			<th><?php __('AllowNull'); ?></th>
+			<th><?php __('Primarykey'); ?></th>
+			<th><?php __('Deleted'); ?></th>
+			<th><?php __('Deleted Date'); ?></th>
+			<th><?php __('Created By'); ?></th>
+			<th><?php __('Modified By'); ?></th>
+			<th><?php __('Created'); ?></th>
+			<th><?php __('Modified'); ?></th>
+			<th class="actions"><?php __('Actions');?></th>
+		</tr>
+			</thead>
+			<tbody>
+		<?php
+			$i = 0;
+			foreach ($evaModel['EvaModelColumn'] as $evaModelColumn):
+				$class = null;
+				if ($i++ % 2 == 0) {
+					$class = ' class="altrow"';
+				}
+			?>
+			<tr<?php echo $class;?>>
+				<td><?php echo $i;?></td>
+				<td><?php echo $evaModelColumn['name'];?></td>
+				<td><?php echo $evaModelColumn['alias'];?></td>
+				<td><?php echo $evaModelColumn['type'];?></td>
+				<td><?php echo $evaModelColumn['length'];?></td>
+				<td><?php echo $evaModelColumn['allowNull'];?></td>
+				<td><?php echo $evaModelColumn['primarykey'];?></td>
+				<td><?php echo $evaModelColumn['deleted'];?></td>
+				<td><?php echo $evaModelColumn['deleted_date'];?></td>
+				<td><?php echo $evaModelColumn['created_by'];?></td>
+				<td><?php echo $evaModelColumn['modified_by'];?></td>
+				<td><?php echo $evaModelColumn['created'];?></td>
+				<td><?php echo $evaModelColumn['modified'];?></td>
+				<td class="actions">
+					<?php echo $this->Html->link(__('View', true), array('controller' => 'eva_model_columns', 'action' => 'view', $evaModelColumn['id']),array('class'=>'action_table_view_data')); ?>
+					<?php echo $this->Html->link(__('Edit', true), array('controller' => 'eva_model_columns', 'action' => 'edit', $evaModelColumn['id']),array('class'=>'action_table_edit_data')); ?>
+					<?php //echo $this->Html->link(__('Delete', true), array('controller' => 'eva_model_columns', 'action' => 'delete', $evaModelColumn['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $evaModelColumn['id'])); ?>
+					<a href="#" class="action_table_delete_data">Delete</a>
+				</td>
+			</tr>
+		<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,165 @@
+<?php
+/**
+ *
+ * PHP versions 4 and 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2010, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright 2005-2010, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @package       cake
+ * @subpackage    cake.cake.libs.view.templates.pages
+ * @since         CakePHP(tm) v 0.10.0.1076
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+if (Configure::read() == 0):
+	$this->cakeError('error404');
+endif;
+?>
+<div id="accordion">
+	<h3><a href="#"><?php __('Home');?></a></h3>
+	<div>
+		
+		<?php
+			if (!is_writable(TMP)):
+		?>
+				<div class='eva_initial_error_message'>
+					<p>Your tmp directory is writable.</p>
+				</div>
+		<?php
+			endif;
+		?>
+		
+		<?php
+			$settings = Cache::settings();
+			if (empty($settings)):
+		?>
+			<div class='eva_initial_error_message'>
+				<p>Your cache is NOT working. Please check the settings in APP/config/core.php</p>
+			</div>
+		<?php
+			endif;
+		?>
+		<?php
+			$filePresent = null;
+			if (!file_exists(CONFIGS.'database.php')):
+				echo '<div class=\'eva_initial_error_message\'>';
+					__('Your database configuration file is NOT present.');
+					echo '<br/>';
+					__('Rename config/database.php.default to config/database.php');
+				echo '</div>';
+			endif;
+		?>
+		<?php
+			App::import('Core', 'Validation');
+			if (!Validation::alphaNumeric('cakephp')) {
+				echo '<div class=\'eva_initial_message\'>';
+				__('PCRE has not been compiled with Unicode support.');
+				echo '<br/>';
+				__('Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring');
+				echo '</div>';
+			}
+		?>
+		<?php
+		if (isset($filePresent)):
+			if (!class_exists('ConnectionManager')) {
+				require LIBS . 'model' . DS . 'connection_manager.php';
+			}
+			$db = ConnectionManager::getInstance();
+			@$connected = $db->getDataSource('default');
+			if (!$connected->isConnected()):
+				echo '<div class=\'eva_initial_error_message\'>';
+					__('Cake is NOT able to connect to the database.');
+				echo '</div>';
+			endif;
+		?>
+		<?php endif;?>
+		<ul id="EvaEvaFrontPageList">
+			<li>
+				<div class="EvaFrontPageIcons" id="EvaDesignMyApplication">
+					<?php //echo $this->Html->link('Design Application', '#'); ?>
+					<p>Design Application</p>
+				</div>
+			</li>
+			<li>
+				<div class="EvaFrontPageIcons" id="EvaFolderApplicationMyApplication">
+					<?php //echo $this->Html->link('Design Application', '#'); ?>
+					<p>Manage Application</p>
+				</div>
+			</li>
+			<li>
+				<div class="EvaFrontPageIcons" id="SettingMyApplication">
+					<?php //echo $this->Html->link('Design Application', '#'); ?>
+					<p>Manage Setting</p>
+				</div>
+			</li>
+			
+		</ul>
+		<div class="clear"></div>
+		<br />
+		<p class="EvaParagraf">How To Use : </p>
+		<br />
+		<ul class="EvaNormalList">
+			<li><?php echo $this->Html->link('Application Name Have To In CamelCaseFormat (Click This Link For More Explonation)', 'http://book.cakephp.org/view/1479/Class-methods'); ?></li>
+			<li>use this setting for database connection, driver = postgres , host = localhost , login = GuestEvacakephp , password = password, database : EvaCakePHPOnline port : 5432 ( currently only support on PostgreSQL, other DBMS adapters will be created soon )</li>
+			<li><?php echo $this->Html->link('Model Name Have To In pluralize Format (Click This Link For More Explonation)', 'http://book.cakephp.org/view/1479/Class-methods'); ?></li>
+			<li>Please Look Up For MyBlog Application for Example</li>
+			<li>If Succesfully Created then http://180.249.61.189/evacakephp1310/your_application_name/your_models/</li>
+		</ul>
+		<br />
+		<p class="EvaParagraf">To Do List : </p>
+		<br />
+		<ul class="EvaNormalList">
+			<li>Mapping Data From EvaWwwSqlDesigner to EvaModel, EvaController, EvaView</li>
+			<li>EvaModel : actsAs array : List of behaviors to load when the model object is initialized. Settings can be passed to behaviors by using the behavior name as index. Eg: var $actsAs = array('Translate', 'MyBehavior' => array('setting1' => 'value1'))</li>
+			<li>List of validation errors and validate array : List of validation rules. Append entries for validation as ('field_name' => '/^perl_compat_regexp$/') that have to match with preg_match(). Use these rules with Model::validate() validationErrors array</li>
+			<li>virtualFields array : Array of virtual fields this model has. Virtual fields are aliased SQL expressions. Fields added to this property will be read as other fields in a model but will not be saveable.</li>
+			<li>var $virtualFields = array('two' => '1 + 1'); Is a simplistic example of how to set virtualFields</li>
+			<li>in basic validation rule : add more option for core validation rules</li>
+			<li>column type converter for adapter, MySQL, MS-SQL, Oracle, DB2, Firebird/Interbase, ADOdb, Sybase</li>
+			
+		</ul>
+		<br />
+		<p class="EvaParagraf">Credit : </p>
+		<br />
+		<ul class="EvaNormalList">
+			<li>To God all Mighty</li>
+			<li>To the one which i use her name to make this application</li>
+			<li><?php echo $this->Html->link('CakePHP', 'http://cakephp.org/'); ?></li>
+			<li><?php echo $this->Html->link('jQuery', 'http://jquery.com/'); ?></li>
+			<li><?php echo $this->Html->link('PHP', 'http://php.net/'); ?></li>
+			<li><?php echo $this->Html->link('PostgreSQL', 'http://www.postgresql.org/'); ?></li>
+			<li><?php echo $this->Html->link('Cristhian Ade Chandra', 'http://www.facebook.com/cristian.candra'); ?></li>
+			<li><?php echo $this->Html->link('Webtechnick', 'http://www.webtechnick.com/'); ?></li>
+			<li><?php echo $this->Html->link('Lecterror', 'http://lecterror.com/'); ?></li>
+			<li><?php echo $this->Html->link('Leigh Mackay', 'http://www.facebook.com/leigh.mackay1980'); ?></li>
+			<li><?php echo $this->Html->link('Simon Brüchner / cakeapp.com','http://www.bruechner.de/'); ?></li>
+			<li><?php echo $this->Html->link('SQL Editor by Ondřej Žára','http://ondras.zarovi.cz/sql/')?></li>
+			<li>Computer Science Unpar Alma mater 2001</li>
+			<li>Informatics Engineering Unikom Alma mater 2005 (IF-1) and 2006(IF-3)</li>
+			<li>Makassar 1 Public Highscool Alma mater 2000</li>
+			<li>Friends on CIST Samudra Indonesia Group who give so much knowledge :
+				<ul>
+					<li><?php echo $this->Html->link('Leo C Sinaga', 'http://www.facebook.com/leo.c.sinaga'); ?></li>
+					<li><?php echo $this->Html->link('Fandy Fardian', 'http://www.facebook.com/fandy.fardian'); ?></li>
+					<li><?php echo $this->Html->link('Ardha Tp', 'http://www.facebook.com/ardha.tp'); ?></li>
+					<li><?php echo $this->Html->link('Mangestya W Argyaputri', 'http://www.facebook.com/argyaputri'); ?></li>
+					<li><?php echo $this->Html->link('Desanto Wuryantono', 'http://www.facebook.com/profile.php?id=1341227574'); ?></li>
+					<li><?php echo $this->Html->link('Mustafa Fadlil Sangaji', 'http://www.facebook.com/profile.php?id=100000212912178'); ?></li>
+					<li><?php echo $this->Html->link('Roi Victor Sihombing', 'http://www.facebook.com/profile.php?id=1420879572'); ?></li>
+					<li><?php echo $this->Html->link('Tony David Liu', 'http://www.facebook.com/94briel'); ?></li>
+					<li><?php echo $this->Html->link('Rama Ashryputro', 'http://www.facebook.com/RamaAshryputro'); ?></li>
+					<li><?php echo $this->Html->link('Novelya Marta Uly Napitupulu', 'http://www.facebook.com/profile.php?id=1532124625'); ?></li>
+					<li><?php echo $this->Html->link('Sh Wibowo', 'http://www.facebook.com/profile.php?id=1149979090'); ?></li>
+				</ul>
+			</li>
+			<li><?php echo $this->Html->link('Mark James', 'http://www.famfamfam.com/lab/icons/silk/'); ?></li>
+			<li><?php echo $this->Html->link('ludo (Ludo van den Boom)', 'https://github.com/ludo'); ?></li>
+			<li><?php echo $this->Html->link('Fillament Group', 'http://www.filamentgroup.com/'); ?></li>
+		</ul>
+	</div>
+</div>
