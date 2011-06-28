@@ -1,3 +1,5 @@
+EvaCakePHP visual bake plugin
+
 license : http://creativecommons.org/licenses/by/3.0/
 
 <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://creativecommons.org/choose/results-one?q_1=2&q_1=1&field_commercial=y&field_derivatives=y&field_jurisdiction=&field_format=&field_worktitle=EvaCakePHP&field_attribute_to_name=Benny+Leonard+Enrico+Panggabean&field_attribute_to_url=http%3A%2F%2Fwhitboks.com&field_sourceurl=http%3A%2F%2Fwhitboks.com&field_morepermissionsurl=http%3A%2F%2Fwhitboks.com&lang=en_US&n_questions=3"><span property="dct:title">EvaCakePHP</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://whitboks.com">Benny Leonard Enrico Panggabean</a>) / <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></div>
@@ -51,4 +53,4 @@ How To Use:
 		'schema' => 'evacakephp',
 	);
 		
-6. open your browser "http://localhost/your_app_name/evacakephp/eva_applications"
+6. open your browser " http://localhost/your_app_name/evacakephp/eva_applications "
