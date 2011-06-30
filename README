@@ -54,3 +54,10 @@ How To Use:
 	);
 		
 6. open your browser " http://localhost/your_app_name/evacakephp/eva_applications "
+7. optional download cakephp debug_kit https://github.com/cakephp/debug_kit/downloads 
+   and edit
+   class EvacakephpAppController extends AppController {
+	//uncomment this if your using toolbar component
+	var $components = array('RequestHandler','Session','Cookie','DebugKit.Toolbar');
+	var $helpers = array('Session','Js' => array('Jquery'),'Form', 'Html');
+   }
