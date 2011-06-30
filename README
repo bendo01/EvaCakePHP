@@ -61,3 +61,6 @@ How To Use:
 	var $components = array('RequestHandler','Session','Cookie','DebugKit.Toolbar');
 	var $helpers = array('Session','Js' => array('Jquery'),'Form', 'Html');
    }
+
+8.when give name of your model in table naming conventions are plural and underscored example if : your tabel name post then you give name : posts , test_posts
+  in http://localhost/your_app_name/evacakephp/eva_models
