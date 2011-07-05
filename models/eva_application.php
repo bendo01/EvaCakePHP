@@ -1632,7 +1632,7 @@ class EvaApplication extends EvacakephpAppModel {
 			$out.="\n";
 			//end of delete function
 			
-			$out.= "\n}\n";
+			
 			//if admin enable
 			if($EvaAdminEnable){
 				$out.="\tfunction admin_delete(\$id = null){\n";
@@ -1649,6 +1649,7 @@ class EvaApplication extends EvacakephpAppModel {
 				$out.="\t}\n";
 				$out.="\n";
 			}
+			$out.= "\n}\n";
 			$out.= "?>";
 			$this->EvaCreateFile($EvaFileName, $out);
 			//exit;
