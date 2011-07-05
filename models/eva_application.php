@@ -2658,8 +2658,8 @@ class EvaApplication extends EvacakephpAppModel {
 	function EvaBakeView($EvaApplicationName = null, $EvaUseDbConfig = null,$EvaDataModel = array(),$EvaAdminEnable = false){
 		if(!empty($EvaDataModel) && $EvaApplicationName !== null){
 			//create folder for view
-			$Folder = new Folder(APP.'views');
-			$Folder->create(APP.'views'.$EvaDataModel['name'],0777);
+			//$Folder = new Folder(APP.'views');
+			//$Folder->create(APP.'views'.$EvaDataModel['name'],0777);
 			//sorting base on created
 			$EvaDataModel['EvaModelColumn'] = Set::sort($EvaDataModel['EvaModelColumn'],'{n}.created','asc');
 			//start create add file
