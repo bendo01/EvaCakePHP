@@ -2357,7 +2357,7 @@ class EvaApplication extends EvacakephpAppModel {
 													$out.="\t\t\t\t\t<td class=\"actions\">\n";
 													if(!empty($EvaTempModel['EvaModel']['primaryKey'])){
 														$out.="\t\t\t\t\t\t<?php echo \$this->Html->link(__('View', true), array('controller' => '".$EvaTempModel['EvaModel']['name']."', 'action' => 'view', \$".Inflector::singularize($EvaTempModel['EvaModel']['name'])."['".$EvaTempModel['EvaModel']['primaryKey']."'],'admin'=>true)); ?>\n";
-														$out.="\t\t\t\t\t\t<?php echo \$this->Html->link(__('Edit', true), array('controller' => '".$EvaTempModel['EvaModel']['name']."', 'action' => 'edit', \$".Inflector::singularize($EvaTempModel['EvaModel']['name'])."['".$EvaTempModel['EvaModel']['primaryKey']."'])); ?>\n";
+														$out.="\t\t\t\t\t\t<?php echo \$this->Html->link(__('Edit', true), array('controller' => '".$EvaTempModel['EvaModel']['name']."', 'action' => 'edit', \$".Inflector::singularize($EvaTempModel['EvaModel']['name'])."['".$EvaTempModel['EvaModel']['primaryKey']."'],'admin'=>true)); ?>\n";
 														$out.="\t\t\t\t\t\t<?php echo \$this->Html->link(__('delete', true), array('controller' => '".$EvaTempModel['EvaModel']['name']."', 'action' => 'delete', \$".Inflector::singularize($EvaTempModel['EvaModel']['name'])."['".$EvaTempModel['EvaModel']['primaryKey']."'],'admin'=>true),null,sprintf(__('Are you sure you want to delete # %s?', true), \$".Inflector::singularize($EvaTempModel['EvaModel']['name'])."['".$EvaTempModel['EvaModel']['primaryKey']."'])); ?>\n";
 													}
 													else{
