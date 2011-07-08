@@ -476,7 +476,7 @@ class EvaApplication extends EvacakephpAppModel {
 				if($EvaColumnType == 'binary'){
 					return 'blob';
 				}
-				if($EvaColumnType == 'boolean'){
+				if($EvaColumnType == 'BOOLEAN'){
 					return 'boolean';
 				}
 				if($EvaColumnType == 'number'){
@@ -609,14 +609,17 @@ class EvaApplication extends EvacakephpAppModel {
 					if($EvaColumnTypeNullOption){
 						$EvaNullOption = 'NULL';
 					}
+					
 					$EvaNewColumnType = $this->EvaDatabaseDriverColumnTypeConverter($EvaDatabaseDriver, $EvaColumnType, $EvaColumnPrimaryKey);
-					//alter table namadatabaseku.namatabelku add column testlagi varchar(255);
-					// ALTER TABLE namadatabaseku.namatabelku ADD COLUMN id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
+					if($EvaColumnType == 'boolean'){
+						pr($EvaNewColumnType);
+					}
 					$EvaColumnQueryString = 'ALTER TABLE '.$EvaDatabaseName.'.'.$EvaTableName.' ADD COLUMN '.$EvaColumnName.' '.$EvaNewColumnType.' ';
-					if($EvaNewColumnType!='text' && $EvaNewColumnType!='datetime'){
+					if($EvaNewColumnType!='text' && $EvaNewColumnType!='datetime' && $EvaNewColumnType!='BOOLEAN'){
 						$EvaColumnQueryString.='('.$EvaColumnLength.') ';
 					}
 					$EvaColumnQueryString .=$EvaNullOption;
+				
 					if($EvaColumnPrimaryKey == 1 && $EvaNewColumnType == 'int'){
 						$EvaColumnQueryString.=' AUTO_INCREMENT PRIMARY KEY';
 						$this->query($EvaColumnQueryString);
@@ -628,16 +631,6 @@ class EvaApplication extends EvacakephpAppModel {
 					else{
 						$this->query($EvaColumnQueryString);
 					}
-					//$EvaCheckColumnTemporaryTableMySql = $this->EvaCheckColumnTemporaryTableMySql($EvaDatabaseName,$EvaTableName);
-					//pr($EvaCheckColumnTemporaryTableMySql);
-					//exit;
-					//pr($EvaCheckColumnTemporaryTableMySql);
-					/*
-					if(!empty($EvaCheckColumnTemporaryTableMySql)){
-						//pr($EvaCheckColumnTemporaryTableMySql);
-						//exit;
-						$this->EvaDeleteColumnTemporaryTableMySql($EvaDatabaseName,$EvaTableName);
-					}*/
 				return true;
 			}
 			else{
