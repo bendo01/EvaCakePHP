@@ -159,7 +159,8 @@ class EvaModel extends EvacakephpAppModel {
 	*/
 	
 	function beforeSave(){
-		$this->data['EvaModel']['alias'] = Inflector::singularize(Inflector::tableize(Inflector::slug($this->data['EvaModel']['name'])));
+		//$this->data['EvaModel']['alias'] = Inflector::singularize(Inflector::tableize(Inflector::slug($this->data['EvaModel']['name'])));
+		$this->data['EvaModel']['alias'] = Inflector::singularize(Inflector::slug($this->data['EvaModel']['name']));
 		return true;
 	}
 	
