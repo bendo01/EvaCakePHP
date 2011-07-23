@@ -615,7 +615,8 @@ class EvaApplication extends EvacakephpAppModel {
 						pr($EvaNewColumnType);
 					}
 					$EvaColumnQueryString = 'ALTER TABLE '.$EvaDatabaseName.'.'.$EvaTableName.' ADD COLUMN '.$EvaColumnName.' '.$EvaNewColumnType.' ';
-					if($EvaNewColumnType!='text' && $EvaNewColumnType!='datetime' && $EvaNewColumnType!='BOOLEAN'){
+					//if($EvaNewColumnType!='text' && $EvaNewColumnType!='datetime' && $EvaNewColumnType!='BOOLEAN'){
+					if($EvaNewColumnType!='text' && $EvaNewColumnType!='datetime' && $EvaNewColumnType!='BOOLEAN' && $EvaNewColumnType!='TIME' && $EvaNewColumnType!='float'){
 						$EvaColumnQueryString.='('.$EvaColumnLength.') ';
 					}
 					$EvaColumnQueryString .=$EvaNullOption;
