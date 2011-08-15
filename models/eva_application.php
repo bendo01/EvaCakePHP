@@ -1001,6 +1001,7 @@ class EvaApplication extends EvacakephpAppModel {
 			* */
 			//pr($EvaDatas);
 			//exit;
+			/*
 			if(!empty($EvaDatas['EvaDbConnection'])){
 				$EvaDbConnectionCounter = 0;
 				foreach($EvaDatas['EvaDbConnection'] as $EvaDbConnections){
@@ -1102,7 +1103,7 @@ class EvaApplication extends EvacakephpAppModel {
 				}
 				unset($EvaDbConnectionCounter);
 			}
-			//pr($EvaDatas);
+			//pr($EvaDatas);*/
 			return $EvaDatas;
 		}
 		else{
@@ -1199,8 +1200,13 @@ class EvaApplication extends EvacakephpAppModel {
 								$out.="\t\t'".$EvaModelColumns['name']."' => array(\n";
 								foreach($EvaColumnRules['EvaModelColumnRuleDetail'] as $EvaModelColumnRuleDetails){
 									//pr($EvaModelColumnRuleDetails);
+									$EvaBasicRuleName = $this->EvaDbConnection->EvaModel->EvaModelColumn->EvaColumnRule->EvaModelColumnRuleDetail->EvaBasicRule->find('first',array('conditions' => array('EvaBasicRule.id' => $EvaModelColumnRuleDetails['eva_basic_rule_id']),'recursive' => -1,'fields' => array('EvaBasicRule.name')));
+									//pr($EvaBasicRuleName);
+									//exit;
+									//pr($EvaModelColumnRuleDetails);
 									$out.="\t\t\t'".$EvaModelColumnRuleDetails['name']."' => array(\n";
-									$out.="\t\t\t\t'rule' => array('".$EvaModelColumnRuleDetails['EvaBasicRule']['name']."'),\n";
+									//$out.="\t\t\t\t'rule' => array('".$EvaModelColumnRuleDetails['EvaBasicRule']['name']."'),\n";
+									$out.="\t\t\t\t'rule' => array('".$EvaBasicRuleName['EvaBasicRule']['name']."'),\n";
 									$out.="\t\t\t\t'message' => '".$EvaModelColumnRuleDetails['message']."',\n";
 									if($EvaModelColumnRuleDetails['allowEmpty'] == true){
 										$out.="\t\t\t\t'allowEmpty' => true,\n";
