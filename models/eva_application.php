@@ -423,7 +423,7 @@ class EvaApplication extends EvacakephpAppModel {
 					return 'real';
 				}
 				if($EvaColumnType == 'datetime'){
-					return 'time without time zone';
+					return 'timestamp without time zone';
 				}
 				if($EvaColumnType == 'date'){
 					return 'date';
